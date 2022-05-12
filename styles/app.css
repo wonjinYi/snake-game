@@ -1,0 +1,184 @@
+#select-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+}
+
+.config-item {
+  width: 50vw;
+
+  padding: 24px;
+  margin: 12px;
+
+  text-align: center;
+  border: 8px solid rgb(80, 80, 80);
+  background-color: white;
+  font-size: 18px;
+}
+
+.config-item > h3 {
+  padding: 4px;
+  margin-bottom: 12px;
+
+  text-align: center;
+  font-size: 26px;
+  background-color: rgb(80, 80, 80);
+  color: white;
+}
+
+.config-item > label {
+  padding: 4px;
+
+  border-radius: 8px;
+  background-color: rgb(80, 80, 80);
+  color: white;
+  font-size: 16px;
+}
+.config-item > input {
+  width: 96px;
+
+  padding: 4px;
+
+  text-align: center;
+  line-height: 24px;
+  border: none;
+  border-radius: 8px;
+  background-color: rgb(200, 200, 200);
+  font-size: 16px;
+}
+
+#start-btn {
+  width: 256px;
+
+  padding: 16px;
+  margin-top: 32px;
+
+  background-color: black;
+  color: white;
+  font-size: 32px;
+  cursor: pointer;
+
+  transition: all 0.5s;
+}
+
+#start-btn:hover {
+  width: 100vw;
+}
+
+/* ------------------------------------------------------------------- */
+
+#backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+}
+#backdrop > h2 {
+  margin-bottom: 16px;
+  border-bottom: 4px solid white;
+}
+
+#backdrop > a {
+  display: inline-block;
+
+  margin: 8px;
+  padding: 4px;
+
+  font-size: 24px;
+  text-decoration: none;
+  color: white;
+  border-radius: 8px;
+  border: 2px solid white;
+  background-color: rgba(0, 0, 0, 0.6);
+
+  transition: background-color 0.5s;
+}
+
+#backdrop > a:hover {
+  background-color: rgba(150, 150, 150, 0.6);
+}
+
+#play-container {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  height: 100%;
+  width: 100%;
+}
+
+#status-container {
+  display: flex;
+  margin: 24px;
+
+  text-align: center;
+}
+
+.status-title {
+  margin-right: 8px;
+  font-size: 32px;
+}
+
+.status-value {
+  display: inline-block;
+
+  padding: 4px;
+  min-width: 128px;
+
+  background-color: rgb(80, 80, 80);
+  color: white;
+  font-size: 24px;
+  border-radius: 16px;
+}
+
+/* ----------------- */
+
+#gameboard-container {
+  background-color: white;
+  border: 8px solid rgb(80, 80, 80);
+}
+
+table {
+  background-color: white;
+}
+
+td {
+  width: 16px;
+  height: 16px;
+
+  background-color: lightgray;
+}
+
+.snake-head {
+  background-color: green;
+}
+.snake-body {
+  background-color: black;
+}
+
+.food {
+  background-color: gold;
+}
+.snake-head.food {
+  background-color: skyblue;
+}
+.snake-body.food {
+  background-color: skyblue;
+}

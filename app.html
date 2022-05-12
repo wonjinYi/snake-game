@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/global.css" />
+    <link rel="stylesheet" href="./styles/app.css" />
+
+    <title>Snake Game : PLAY</title>
+  </head>
+  <body>
+    <nav id="topnav">
+      <h1>Snake Game : PLAY</h1>
+      <div id="btn-container">
+        <a href="./index.html">Home</a>
+        <a href="./howtoplay.html">How To Play</a>
+        <a href="./credit.html">Credit</a>
+      </div>
+    </nav>
+    <main>
+      <div id="select-container">
+        <div id="config">
+          <div id="config-size" class="config-item">
+            <h3 class="config-title">Gameboard Size</h3>
+            <p>10~30 are allowed</p>
+            <br />
+            <label for="size-width">Width</label>
+            <input id="size-width" type="text" placeholder="width" value="20" />
+            <br /><br />
+            <label for="size-width">Height</label>
+            <input id="size-height" type="text" placeholder="height" value="20" />
+          </div>
+          <div id="config-speed" class="config-item">
+            <h3 class="config-title">Game Speed</h3>
+            <p>5~30 are allowed</p>
+            <br />
+            <label for="speed">Speed</label>
+            <input id="speed" type="text" placeholder="speed" value="10" />
+          </div>
+        </div>
+        <div>
+          <button id="start-btn">START</button>
+        </div>
+      </div>
+      <!-- end select-container -->
+      <!-- -------------------- -->
+      <!-- start play-container -->
+      <div id="play-container">
+        <div id="backdrop">Press ↑ ← ↓ → to start game</div>
+        <div id="status-container">
+          <div class="status-item" style="margin-right: 32px">
+            <span class="status-title" alt="play time">⏰</span>
+            <span id="playtime" class="status-value">00 : 00</span>
+          </div>
+          <div class="status-item">
+            <span class="status-title" alt="score">🟨</span>
+            <span id="score" class="status-value">0</span>
+          </div>
+        </div>
+        <div id="gameboard-container">
+          <table id="gameboard"></table>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <span>Lee Wonjin</span>
+    </footer>
+
+    <script src="./localstorageScript/storeList.js"></script>
+    <script src="./localstorageScript/goraniStore.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

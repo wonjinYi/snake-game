@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  width: 100vw;
+  height: calc(100vh - 90px);
+
+  background-color: rgb(50, 50, 50);
+}
+
+#topnav {
+  display: flex;
+  height: 60px;
+
+  line-height: 60px;
+  color: white;
+  background-color: black;
+}
+
+#topnav > h1 {
+  padding: 0 20px;
+}
+
+#topnav > #btn-container {
+  margin-left: auto;
+}
+
+#topnav > #btn-container > a {
+  padding: 0 20px;
+
+  text-decoration: none;
+  color: white;
+
+  transition: color 0.5s;
+}
+
+#topnav > #btn-container > a:hover {
+  color: goldenrod;
+}
+
+footer {
+  height: 30px;
+
+  text-align: center;
+  line-height: 30px;
+  background-color: black;
+}
+
+footer > span {
+  color: white;
+}

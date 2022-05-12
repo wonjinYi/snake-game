@@ -1,0 +1,44 @@
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+h2 {
+  padding: 16px;
+
+  background-color: rgb(10, 10, 10);
+  color: white;
+}
+
+section {
+  padding: 8px;
+  margin-top: 8px;
+
+  background-color: white;
+  border-radius: 8px;
+}
+
+h3 {
+  text-align: center;
+  border-bottom: 4px solid black;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.num,
+.item {
+  padding: 2px 6px;
+  margin-right: 4px;
+
+  background-color: rgb(100, 100, 100);
+  color: white;
+  border-radius: 8px;
+}
+li {
+  margin-top: 16px;
+}

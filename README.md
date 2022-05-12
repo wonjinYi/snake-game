@@ -11,5 +11,3 @@
 ## External Resource
 
 - Snake Image : created by brgfx [link](https://www.freepik.com/vectors/animal-stickers)
-
-![snake](./snakeimage.jpg)

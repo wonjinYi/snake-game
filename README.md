@@ -6,7 +6,7 @@
 ## Developer
 
 - Original Game : Blockade which is developed by Gremlin `1976`
-- Implemented by Lee Wonjin `2021`
+- Implemented by Lee Wonjin `2022`
 
 ## External Resource
 

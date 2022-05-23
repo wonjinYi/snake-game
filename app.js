@@ -21,6 +21,17 @@ function formatTime(rawSeconds) {
   return `${strmin} : ${strsec}`;
 }
 
+async function postData(data) {
+  const url =
+    "https://script.google.com/macros/s/AKfycbyaY8lg8Ba_0oh3I5Q-X6HReYwStOwIYVhOjBK-zk1bvhWs9BKL2bi17-GEpvjUI5pyhA/exec";
+  let res = await fetch(url, {
+    method: "POST",
+    body: JSON.stringify(data),
+  });
+
+  return res.json();
+}
+
 // ---------------------
 // ----- declare global variables
 // ---------------------
@@ -294,9 +305,46 @@ class Manager {
     $.backdrop.style.display = "flex";
     $.backdrop.innerHTML = `
         <h2>G A M E O V E R</h2>
+        <div style="text-align: center">
+            <br />
+            <p>Submit your score on the score-board</p>
+            <input id="gameover-submitscore-input" type="text" placeholder="Write your name here" style="font-size:20px; padding : 2px; border : none; border-radius : 4px; text-align:center;" />
+            <button id="gameover-submitscore-btn" style="font-size:20px; border-radius : 4px; padding : 2px; cursor:pointer; border:none;">Submit</button>
+            <p id="gameover-submitscore-text"></p>
+            <br />
+        </div>
         <a href="./app.html">Restart</a>
         <a href="./index.html">Back to Title</a>
     `;
+
+    const gameoverSubmitScoreInput = document.getElementById("gameover-submitscore-input");
+    const gameoverSubmitBtn = document.getElementById("gameover-submitscore-btn");
+    const gameoverSubmitScoreText = document.getElementById("gameover-submitscore-text");
+
+    gameoverSubmitBtn.onclick = async () => {
+      let username = gameoverSubmitScoreInput.value;
+      username = username.trim();
+      if (username == false) {
+        alert("User name is empty! Please fill in the text box.");
+        return;
+      }
+
+      const reqData = {
+        gamename: "snakeGame",
+        username: username,
+        score: this.score,
+      };
+
+      // start submitting process
+      gameoverSubmitScoreText.textContent = "⏳ Please Wait...";
+      gameoverSubmitScoreText.style.color = "orange";
+
+      const res = await postData(reqData);
+
+      // fisish submitting process.
+      gameoverSubmitScoreText.textContent = "✅ Submitted successfully";
+      gameoverSubmitScoreText.style.color = "green";
+    };
   }
 
   isGameover() {
